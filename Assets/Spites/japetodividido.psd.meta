@@ -1,0 +1,516 @@
+fileFormatVersion: 2
+guid: 746854b2742025f4d8d7bdd94d573d09
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4195965371891456754
+    second: japetodividido_0
+  - first:
+      213: -3912376451350862057
+    second: japetodividido_1
+  - first:
+      213: 6568255721800562034
+    second: japetodividido_2
+  - first:
+      213: 901030534040067845
+    second: japetodividido_3
+  - first:
+      213: -4438454693476556901
+    second: japetodividido_4
+  - first:
+      213: -92287648281714232
+    second: japetodividido_5
+  - first:
+      213: -8487873804772693361
+    second: japetodividido_6
+  - first:
+      213: -588093909466013447
+    second: japetodividido_7
+  - first:
+      213: -66313184886322368
+    second: japetodividido_8
+  - first:
+      213: 1853212862765123847
+    second: japetodividido_9
+  - first:
+      213: -2036859119661652915
+    second: japetodividido_10
+  - first:
+      213: 5214409135955892254
+    second: japetodividido_11
+  - first:
+      213: 2765378893111447119
+    second: japetodividido_12
+  - first:
+      213: 5930160689029834665
+    second: japetodividido_13
+  - first:
+      213: -8631786341074991716
+    second: japetodividido_14
+  - first:
+      213: -8769015865112566628
+    second: japetodividido_15
+  - first:
+      213: -5420455016519684137
+    second: japetodividido_16
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: japetodividido_0
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 1492
+        width: 393
+        height: 958
+      alignment: 9
+      pivot: {x: 0.8996813, y: 0.9007938}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fa1e6946401b3a30800000000000000
+      internalID: 4195965371891456754
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japetodividido_1
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 2270
+        width: 1358
+        height: 1115
+      alignment: 9
+      pivot: {x: 0.49571612, y: 0.025202319}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 717e0ad985274b9c0800000000000000
+      internalID: -3912376451350862057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japetodividido_2
+      rect:
+        serializedVersion: 2
+        x: 1926
+        y: 1377
+        width: 428
+        height: 938
+      alignment: 9
+      pivot: {x: 0.14659561, y: 0.8783287}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27579d367c1272b50800000000000000
+      internalID: 6568255721800562034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japetodividido_3
+      rect:
+        serializedVersion: 2
+        x: 682
+        y: 1070
+        width: 1109
+        height: 983
+      alignment: 9
+      pivot: {x: 0.6206532, y: 0.44081825}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50f1d313f7a118c00800000000000000
+      internalID: 901030534040067845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japetodividido_4
+      rect:
+        serializedVersion: 2
+        x: 1913
+        y: 1823
+        width: 4
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9f1aa3e8f07762c0800000000000000
+      internalID: -4438454693476556901
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japetodividido_5
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 1545
+        width: 24
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c123037fd028bef0800000000000000
+      internalID: -92287648281714232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japetodividido_6
+      rect:
+        serializedVersion: 2
+        x: 244
+        y: 941
+        width: 355
+        height: 438
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8a2e28ceb3053a80800000000000000
+      internalID: -8487873804772693361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japetodividido_7
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 924
+        width: 88
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f025b784bba6d7f0800000000000000
+      internalID: -588093909466013447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japetodividido_8
+      rect:
+        serializedVersion: 2
+        x: 1909
+        y: 864
+        width: 445
+        height: 449
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b0dea7288641ff0800000000000000
+      internalID: -66313184886322368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japetodividido_9
+      rect:
+        serializedVersion: 2
+        x: 1894
+        y: 914
+        width: 9
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 709cc4aa74fe7b910800000000000000
+      internalID: 1853212862765123847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japetodividido_10
+      rect:
+        serializedVersion: 2
+        x: 1405
+        y: 188
+        width: 360
+        height: 666
+      alignment: 9
+      pivot: {x: 0.49999967, y: 0.9018149}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d446d032c6f9bb3e0800000000000000
+      internalID: -2036859119661652915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japetodividido_11
+      rect:
+        serializedVersion: 2
+        x: 1836
+        y: 839
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e18d3366b7d4d5840800000000000000
+      internalID: 5214409135955892254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japetodividido_12
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 155
+        width: 528
+        height: 656
+      alignment: 9
+      pivot: {x: 0.5550905, y: 0.9079402}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4e4541a379906620800000000000000
+      internalID: 2765378893111447119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japetodividido_13
+      rect:
+        serializedVersion: 2
+        x: 1385
+        y: 723
+        width: 11
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a7eb923ab92c4250800000000000000
+      internalID: 5930160689029834665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japetodividido_14
+      rect:
+        serializedVersion: 2
+        x: 2066
+        y: 730
+        width: 15
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9508235e0cb53880800000000000000
+      internalID: -8631786341074991716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japetodividido_15
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 689
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c94633ae7823e4680800000000000000
+      internalID: -8769015865112566628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: japetodividido_16
+      rect:
+        serializedVersion: 2
+        x: 1858
+        y: 634
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df2c5b91eca6c4b0800000000000000
+      internalID: -5420455016519684137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

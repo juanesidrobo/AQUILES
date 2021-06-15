@@ -1,0 +1,468 @@
+fileFormatVersion: 2
+guid: 552285cebdde81e47af1a5174e963a53
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -2535652142477884710
+    second: oceano_0
+  - first:
+      213: 7873426639903086616
+    second: oceano_1
+  - first:
+      213: 2068219401927892881
+    second: oceano_2
+  - first:
+      213: -1842263808398881527
+    second: oceano_3
+  - first:
+      213: 63034734228618444
+    second: oceano_4
+  - first:
+      213: 911187956994909818
+    second: oceano_5
+  - first:
+      213: 3314403573096235264
+    second: oceano_6
+  - first:
+      213: -1238386120725208105
+    second: oceano_7
+  - first:
+      213: -1017283509624150515
+    second: oceano_8
+  - first:
+      213: -362032183352998813
+    second: oceano_9
+  - first:
+      213: 4134489715487496026
+    second: oceano_10
+  - first:
+      213: -457162684126763331
+    second: oceano_11
+  - first:
+      213: 1532587402748664549
+    second: oceano_12
+  - first:
+      213: 2578879261867668172
+    second: oceano_13
+  - first:
+      213: -4253876811913693019
+    second: oceano_14
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: oceano_0
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 2379
+        width: 1041
+        height: 1018
+      alignment: 9
+      pivot: {x: 0.5735131, y: 0.44737834}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad2c5a59fcd8fccd0800000000000000
+      internalID: -2535652142477884710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oceano_1
+      rect:
+        serializedVersion: 2
+        x: 1425
+        y: 3041
+        width: 257
+        height: 188
+      alignment: 9
+      pivot: {x: 0.559776, y: 0.43871292}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 818558450d7044d60800000000000000
+      internalID: 7873426639903086616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oceano_2
+      rect:
+        serializedVersion: 2
+        x: 1490
+        y: 2872
+        width: 231
+        height: 126
+      alignment: 9
+      pivot: {x: 0.5166264, y: 0.46951923}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19f9b71969ac3bc10800000000000000
+      internalID: 2068219401927892881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oceano_3
+      rect:
+        serializedVersion: 2
+        x: 1928
+        y: 2856
+        width: 403
+        height: 407
+      alignment: 9
+      pivot: {x: 0.48093948, y: 0.39619943}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90d83d5b3d6fe66e0800000000000000
+      internalID: -1842263808398881527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oceano_4
+      rect:
+        serializedVersion: 2
+        x: 1947
+        y: 2518
+        width: 327
+        height: 323
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccc353eb1c1ffd000800000000000000
+      internalID: 63034734228618444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oceano_5
+      rect:
+        serializedVersion: 2
+        x: 1529
+        y: 2572
+        width: 253
+        height: 154
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a76ab448e9035ac00800000000000000
+      internalID: 911187956994909818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oceano_6
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 2004
+        width: 480
+        height: 495
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 001cfa04d702ffd20800000000000000
+      internalID: 3314403573096235264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oceano_7
+      rect:
+        serializedVersion: 2
+        x: 1239
+        y: 1262
+        width: 510
+        height: 530
+      alignment: 9
+      pivot: {x: 0.35133058, y: 0.24113078}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d3666b626e50dee0800000000000000
+      internalID: -1238386120725208105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oceano_8
+      rect:
+        serializedVersion: 2
+        x: 291
+        y: 973
+        width: 852
+        height: 632
+      alignment: 9
+      pivot: {x: 0.3304909, y: 0.87705064}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d066dfca902e1e1f0800000000000000
+      internalID: -1017283509624150515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oceano_9
+      rect:
+        serializedVersion: 2
+        x: 684
+        y: 2034
+        width: 249
+        height: 246
+      alignment: 9
+      pivot: {x: 0.2534969, y: 0.76418597}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3644cf9b5adc9faf0800000000000000
+      internalID: -362032183352998813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oceano_10
+      rect:
+        serializedVersion: 2
+        x: 724
+        y: 1796
+        width: 202
+        height: 202
+      alignment: 9
+      pivot: {x: 0.7681096, y: 0.8038578}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a575323ad78a06930800000000000000
+      internalID: 4134489715487496026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oceano_11
+      rect:
+        serializedVersion: 2
+        x: 153
+        y: 1984
+        width: 286
+        height: 325
+      alignment: 9
+      pivot: {x: 0.76510984, y: 0.76662487}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db66f0006f4d7a9f0800000000000000
+      internalID: -457162684126763331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oceano_12
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 1803
+        width: 213
+        height: 166
+      alignment: 9
+      pivot: {x: 0.19488367, y: 0.76100326}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ea92107f18d44510800000000000000
+      internalID: 1532587402748664549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oceano_13
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 1702
+        width: 61
+        height: 93
+      alignment: 9
+      pivot: {x: 0.42499378, y: 0.7623895}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc27e3276050ac320800000000000000
+      internalID: 2578879261867668172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: oceano_14
+      rect:
+        serializedVersion: 2
+        x: 649
+        y: 1701
+        width: 38
+        height: 100
+      alignment: 9
+      pivot: {x: 0.54013544, y: 0.7135193}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a8fc9bd39137f4c0800000000000000
+      internalID: -4253876811913693019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
