@@ -502,8 +502,8 @@ GameObject:
   m_Component:
   - component: {fileID: 263064800520709410}
   m_Layer: 0
-  m_Name: Enemigo
-  m_TagString: Untagged
+  m_Name: Hyperion
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -665,6 +665,7 @@ MonoBehaviour:
   nombreEnemigo: Hyperion
   puntosSalud: 10
   velocidad: 3
+  danioQueDa: 0
 --- !u!114 &263064800654934388
 MonoBehaviour:
   m_ObjectHideFlags: 0
