@@ -1,2 +1,4 @@
 # AQUILES_Info_II
- Repositorio del juago Aquiles 
+ Repositorio del juego Aquiles 
+ 
+ En progreso...
