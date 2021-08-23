@@ -7450,7 +7450,7 @@ MonoBehaviour:
   - {fileID: 1398410747}
   - {fileID: 981947266}
   - {fileID: 1398410747}
-  _speedWrite: 0.5
+  _speedWrite: 0.2
 --- !u!114 &1070461855
 MonoBehaviour:
   m_ObjectHideFlags: 0
