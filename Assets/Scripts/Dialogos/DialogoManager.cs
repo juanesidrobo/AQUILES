@@ -1,8 +1,10 @@
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-
+using UnityEngine.SceneManagement;
 public class DialogoManager : MonoBehaviour
 {
     [System.Serializable]
@@ -36,9 +38,13 @@ public class DialogoManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey("w"))
+        if (Input.GetKeyDown("t"))
         {
             ContinueDialog();
+        }
+        if (Input.GetKeyDown("f"))
+        {
+            SceneManager.LoadScene("Tartaro");
         }
     }
     public void CleanText()
@@ -51,10 +57,14 @@ public class DialogoManager : MonoBehaviour
     IEnumerator Talk()
     {
         _textContainers[_sentences[_index]._character].text = "";
-        foreach(char letra in _sentences[_index]._2say.ToCharArray())
+        foreach (char letra in _sentences[_index]._2say.ToCharArray())
         {
-            _textContainers[_sentences[_index]._character].text += letra;
-            yield return new WaitForSeconds(_speedWrite);
+            //if (_index < _sentences.Length)
+            //{
+                _textContainers[_sentences[_index]._character].text += letra;
+                yield return new WaitForSeconds(_speedWrite);
+            //}
+            
         }
     }
     public void EnableDisableBox(bool enable)
@@ -63,11 +73,15 @@ public class DialogoManager : MonoBehaviour
     }
     public void ContinueDialog()
     {
-        if (_sentences[_index]._deactive == true)
+        if (_index < _sentences.Length)
         {
-            EnableDisableBox(false);
+            if (_sentences[_index]._deactive)
+            {
+                EnableDisableBox(false);
+            }
+            _index += 1;
         }
-        _index += 1;
+        
         if (_index < _sentences.Length)
         {
             if (_sentences[_index]._active == true)
@@ -81,4 +95,9 @@ public class DialogoManager : MonoBehaviour
             CleanText();
         }
     }
+
 }
+
+
+
+

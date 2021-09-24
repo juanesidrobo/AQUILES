@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1089194513443583374}
   - component: {fileID: 1089194513443583375}
   - component: {fileID: 1089194513443583372}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: SkullA
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -98,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51d730ceae1339f41b98cc79e418a1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 32
+  Speed: 17
 --- !u!50 &1089194513443583374
 Rigidbody2D:
   serializedVersion: 4

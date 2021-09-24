@@ -5,25 +5,29 @@ TagManager:
   serializedVersion: 2
   tags:
   - Arma
-  - floor
   - Enemigo
   - Obstaculos
   - "Explosi\xF3n"
+  - Aquiles
+  - Enemy
+  - Item
+  - Enemy1
+  - suelo
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Enemigos
+  - 
   - Water
   - UI
   - Player
-  - Piso
-  - 
+  - Enemigo
+  - suelo
+  - Aquiles
   - Interactuar
   - Attack
-  - 
-  - 
-  - 
+  - poseidon
+  - Item
   - 
   - 
   - 

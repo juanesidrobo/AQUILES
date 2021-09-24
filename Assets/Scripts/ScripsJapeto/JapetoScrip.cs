@@ -11,15 +11,21 @@ public class JapetoScrip : MonoBehaviour
     public bool betterJump = false;
     public float fallMultiplier = 10f;
     public float lowJumpMultiplier = 12f;
-    public GameObject SkullAPrefab;
-    public float LastShoot;
-
+    public GameObject crossed1Prefab;
+    public float attackSpeed = 1f;
+    bool attacking;
+    //Variables relacionadas con la vida
+    //Puntos de vida
+    public int maxHealthPoints = 15;
+    //Vida actual
+    public int healthpoints;
 
 
     void Start()
     {
         Rb2D = GetComponent<Rigidbody2D>();
         animator= GetComponent<Animator>();
+        healthpoints = maxHealthPoints;
     }
 
 
@@ -49,11 +55,10 @@ public class JapetoScrip : MonoBehaviour
             Rb2D.velocity = new Vector2(Rb2D.velocity.x, jumpSpeed);
         }
 
-        /*if (Input.GetKey(KeyCode.E) && Time.time > LastShoot +0.25f)
+        if (Input.GetKey(KeyCode.E))
         {
-            Shoot();
-            LastShoot = Time.time;
-        }*/
+            if (!attacking) StartCoroutine(Attack(attackSpeed));
+        }
 
         if (betterJump)
         {
@@ -68,13 +73,28 @@ public class JapetoScrip : MonoBehaviour
             }
         }
     }
-    /*private void Shoot()
-    {
-        Vector3 direction;
-        if (transform.localScale.x == 0.8f) direction = Vector3.right;
-        else direction = Vector3.left;
-        GameObject SkullA= Instantiate(SkullAPrefab, transform.position + direction * 0.1f, Quaternion.identity);
-        SkullA.GetComponent<skullsc>().SetDirection(direction);
-    }*/
 
+    IEnumerator Attack(float seconds)
+    {
+        attacking = true; //Activar Bandera
+        //Si hay objetivo y el prefab es correcto crear instancia
+        if (crossed1Prefab != null)
+        {
+            Instantiate(crossed1Prefab, transform.position, transform.rotation);
+            //Esperar los segundos de turno antes de hacer otro ataque
+            yield return new WaitForSeconds(seconds);
+        }
+        attacking = false; //Desactivar bandera
+    }
+
+    //Gestión de ataque (hecha en 1 sola para ahorrar linea, permite disminuir y destruir)
+    public void Attacked1()
+    {
+        healthpoints = healthpoints - 1;
+        if (healthpoints <= 0)
+        {
+            AudioManager.instance.PlayAudio(AudioManager.instance.muerteEnemigo);
+            Destroy(gameObject);
+        }
+    }
 }

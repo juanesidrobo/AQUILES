@@ -1,95 +1,183 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Enemysc : MonoBehaviour
 {
-    public GameObject Zeus;
-    public GameObject SkullAPrefab;
-    private float LastShoot;
-    public float Speed;
-    public Transform Player;
-    public Rigidbody2D rb2D;
-    public Animator animator;
-    public float DistancePlayer;
-    public float RangeVision;
-    public float ReverseSpeed;
-    public float RangeReverse;
-    public float RangeShoot;
-    public float AttackSpeed = 7f;
-    bool Attacking;
+    //Variables para guardar al jugador
+    public float visionRadius;
+    public float attackRadius;
+    public float speed;
+
+    //Variables relacionadas con ataque
+    //Prefab disparo
+    public GameObject charged6Prefab;
+    //Velocidad de ataque (segundos entre ataques)
+    public float attackSpeed = 1f;
+    bool attacking;
+    public bool lookingRight;
+    public float playerdistance;
+    public Transform zeus;
+
+    //Variables relacionadas con la vida
+    //Puntos de vida
+    public float maxHealthPoints = 15;
+    //Vida actual
+    public float healthpoints;
+
+
+    //Variable para guardar al jugador
+    GameObject player;
+
+    // Variable para guardar posición inicial
+    Vector3 initialPosition, target;
+
+    //Animador y cuerpo cinematico con la rotación en Z congelada
+    Animator anim;
+    Rigidbody2D rb2d;
+
+
     private void Start()
     {
-        SkullAPrefab = null;
+
+        //Recuperamos al jugador gracias al Tag
+        player = GameObject.FindGameObjectWithTag("Player");
+
+        //Guardamos nuestra posición inicial
+        initialPosition = transform.position;
+
+        anim = GetComponent<Animator>();
+        rb2d = GetComponent<Rigidbody2D>();
+
+        healthpoints = maxHealthPoints;
+
     }
     void Update()
     {
-        if (Zeus == null) return;
-        Vector3 direction = Zeus.transform.position - transform.position;
-        if (direction.x >= 0.0f) transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
-        else transform.localScale = new Vector3(-0.5f, 0.5f, 0.5f);
 
-        float distance = Mathf.Abs(Zeus.transform.position.x - transform.position.x);
+        // Por defecto nuestro target siempre será nuestra posición inicial 
+        Vector3 target = initialPosition;
 
-        /*if (distance < 40.0f && Time.time > LastShoot + 0.25f )
+        //Comprobamos un Raycast del enemigo hasta el jugador 
+        RaycastHit2D hit = Physics2D.Raycast(
+            transform.position,
+            player.transform.position - transform.position,
+            visionRadius,
+            1 << LayerMask.NameToLayer("Default")
+        //  Poner el propio Enemy en una layer distinta a Default para evitar el Raycast
+        // También poner al objeto Attack y al Prefab Slash un Layer attack 
+        // Sino los detectará como entorno y se mueve atrás al hacer ataques
+        );
+
+        // A quí se debugea el Raycast 
+        Vector3 forward = transform.TransformDirection(player.transform.position - transform.position);
+        Debug.DrawRay(transform.position, forward, Color.red);
+
+        LookPlayer();
+        //Si el Raycast encuentra al jugador lo ponemos de target 
+        if (hit.collider != null)
         {
-            Shoot();
-            LastShoot = Time.time;
-        }*/
-
-        DistancePlayer = Vector2.Distance(Player.position, rb2D.position);
-        if (DistancePlayer < RangeVision && DistancePlayer > RangeReverse && DistancePlayer > RangeShoot)
-        {
-            Vector2 objective = new Vector2(Player.position.x, Player.position.y);
-            Vector2 NewPos = Vector2.MoveTowards(rb2D.position, objective, Speed * Time.deltaTime);
-            rb2D.MovePosition(NewPos);
-            animator.SetBool("Run", true);
+            if (hit.collider.tag == "Player")
+            {
+                target = player.transform.position;
+            }
         }
 
-        else if (DistancePlayer < RangeVision && DistancePlayer > RangeReverse && DistancePlayer <= RangeShoot) 
+        //Calculamos la distancia y dirección actual hasta el target 
+        float distance = Vector3.Distance(target, transform.position);
+        Vector3 dir = (target - transform.position).normalized;
+
+        // Si es el enemigo y está en rango de ataque para y atarca
+        if (target != initialPosition && distance < attackRadius)
         {
-            Vector2 objective = new Vector2(Player.position.x, Player.position.y);
-            Vector2 NewPos = Vector2.MoveTowards(rb2D.position, objective, 0 * Time.deltaTime);
-            rb2D.MovePosition(NewPos);
-            if(!Attacking) StartCoroutine(Attack(AttackSpeed));
+            //Ataca
+            anim.SetFloat("movX", dir.x);
+            anim.SetFloat("movY", dir.y);
+            anim.Play("Enemy_Walk", -1, 0); //Congelar animación de caminar
+
+            //Empieza a atacar (Layer en ataque para evitar Raycast)
+            if (!attacking) StartCoroutine(Attack(attackSpeed));
+        }
+        //En caso distinto se mueve hacia él
+        else
+        {
+            rb2d.MovePosition(transform.position + dir * speed * Time.deltaTime);
+
+            //Al moverse establece la animación movimiento
+            anim.speed = 1;
+            anim.SetFloat("movX", dir.x);
+            anim.SetFloat("movY", dir.y);
+            anim.SetBool("Run", true);
         }
 
-        else if (DistancePlayer < RangeReverse)
+        //última comprobación para evitar bugs forzando la posición inicial
+        if (target == initialPosition && distance < 0.05f)
         {
-            Vector2 objective = new Vector2(Player.position.x, Player.position.y);
-            Vector2 NewPos = Vector2.MoveTowards(rb2D.position, objective, ReverseSpeed * Time.deltaTime);
-            rb2D.MovePosition(NewPos);
-            animator.SetBool("Run", true);
+            transform.position = initialPosition;
+            // Y cambiamos la animaciión de nuevo a Respirar Japeto
+            anim.SetBool("Run", false);
         }
 
-    } 
+        // Y un debug con línea hasta el target
+        Debug.DrawLine(transform.position, target, Color.green);
 
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-        Gizmos.DrawWireSphere(transform.position, RangeVision);
-        Gizmos.DrawWireSphere(transform.position, RangeShoot);
-        Gizmos.DrawWireSphere(transform.position, RangeReverse);
+        playerdistance = Vector2.Distance(zeus.position, rb2d.position);
     }
 
-    IEnumerator Attack (float seconds= 2f){
-        Attacking = true;
-        if (DistancePlayer == RangeShoot && SkullAPrefab != null)
+    
+    public void LookPlayer()
+    {
+        Vector3 toTurn = transform.localScale;
+        if ( playerdistance < visionRadius)
         {
-            Instantiate(SkullAPrefab, transform.position, transform.rotation);
+            if (transform.position.x < zeus.position.x && !lookingRight)
+            {
+                Flip();
+                lookingRight = true;
+            }
+            else if(transform.position.x > zeus.position.x && lookingRight)
+            {
+                lookingRight = false;
+            }
+        }
+    }
+
+    public void Flip()
+    {
+        transform.Rotate(0, 180, 0);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, visionRadius);
+        Gizmos.DrawWireSphere(transform.position, attackRadius);
+    }
+
+    IEnumerator Attack(float seconds)
+    {
+        attacking = true; //Activar Bandera
+        //Si hay objetivo y el prefab es correcto crear instancia
+        if (target != initialPosition && charged6Prefab != null)
+        {
+            Instantiate(charged6Prefab, transform.position, transform.rotation);
+            //Esperar los segundos de turno antes de hacer otro ataque
             yield return new WaitForSeconds(seconds);
         }
-        Attacking = false;
+        attacking = false; //Desactivar bandera
     }
 
-    /*private void Shoot()
+     //Gestión de ataque (hecha en 1 sola para ahorrar linea, permite disminuir y destruir)
+     public void Attacked()
     {
-        Vector3 direction;
-        if (transform.localScale.x == 0.5f) direction = Vector3.right;
-        else direction = Vector3.left;
-        GameObject SkullA = Instantiate(SkullAPrefab, transform.position + direction * 0.1f, Quaternion.identity);
-        SkullA.GetComponent<skullsc>().SetDirection(direction);
-    }*/
+        healthpoints = healthpoints - 1;
+        if (healthpoints <= 0)
+        {
+            Destroy(gameObject);
+            AudioManager.instance.PlayAudio(AudioManager.instance.muerteEnemigo);
+        }
 
+    }
 
 }

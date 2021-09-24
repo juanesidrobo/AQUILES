@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
         //Movimiento--
         Ataca();
         miRigidbody2D.velocity = new Vector2(horizonte, down) * atributosjugador.velocidad;
-        if (Input.GetKey("space") && salto.estaSuelo)
+        if (Input.GetKey("w") && salto.estaSuelo)
         {
             SetXYAnimator();
         

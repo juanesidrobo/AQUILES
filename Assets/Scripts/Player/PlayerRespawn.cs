@@ -11,4 +11,8 @@ public class PlayerRespawn : MonoBehaviour
         animator.Play("morir_hades");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    public void MorirAquiles()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
 }

@@ -10,5 +10,9 @@ public class chuzoDanio : MonoBehaviour
         {
             collision.transform.GetComponent<PlayerRespawn>().PlayerDamaged();
         }
+        if (collision.transform.CompareTag("Aquiles"))
+        {
+            collision.transform.GetComponent<PlayerRespawn>().MorirAquiles();
+        }
     }
 }

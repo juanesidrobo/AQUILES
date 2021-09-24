@@ -7,7 +7,7 @@ public class skullsc : MonoBehaviour
     public float Speed;
     GameObject player; //Recuparar al objeto jugador
     Rigidbody2D rb2d;  // Recuperar componenete cuerpo rigido 
-    Vector3 target, dir; //Vectores para almacenar el onjetivo y su dirección
+    Vector3 target, dir; //Vectores para almacenar el objetivo y su dirección
 
     void Start()
     {
@@ -24,7 +24,7 @@ public class skullsc : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //Si hay un objetivo movemos la calavera hacia su posición
+        //Si hay un objetivo movemos la bala hacia su posición
         if (target != Vector3.zero)
         {
             rb2d.MovePosition(transform.position + (dir * Speed) * Time.deltaTime);
@@ -33,9 +33,11 @@ public class skullsc : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.transform.tag == "Player" || col.transform.tag == "Attack")
+        if (col.tag == "Player") col.SendMessage("Attacked1");
+        if (col.transform.tag == "Player")
         {
             //Si se choca con el jugador o con un ataque se destruye
+            AudioManager.instance.PlayAudio(AudioManager.instance.golpear);
             Destroy(gameObject);
         }
     }

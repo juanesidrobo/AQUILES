@@ -21,8 +21,16 @@ public class Subarma : MonoBehaviour
     {
         if (Input.GetKey("e"))
         {
-            GameObject subArma = Instantiate(arma_destello, transform.position, Quaternion.identity);
-            subArma.GetComponent<Rigidbody2D>().AddForce(new Vector2(600f, 0f), ForceMode2D.Force);
+            GameObject subArma = Instantiate(arma_destello, transform.position, Quaternion.Euler(0,0,-132));
+            if (transform.localScale.x < 0)
+            {
+                subArma.GetComponent<Rigidbody2D>().AddForce(new Vector2(-600f, 0f), ForceMode2D.Force);
+            }
+            else
+            {
+                subArma.GetComponent<Rigidbody2D>().AddForce(new Vector2(600f, 0f), ForceMode2D.Force);
+            }
+            
         }
     }
 }
