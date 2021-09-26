@@ -9,10 +9,16 @@ Categoría: Acción y aventura
 Plataforma: Windows
 Motor gráfico y Lenguaje: Unity, C# 
 
-Los controles básicos serán: 
-● “a” y “d” para moverse a los lados 
-● “w” para subir escaleras 
-● “e” para atacar
-● “t” para continuar diálogo (en escenas que lo requieran)
-● “f” para cambiar de escena (en escenas que lo requieran)
+Los controles básicos serán:
 
+ ● “a” y “d” para moverse a los lados 
+
+ ● “w” para subir escaleras
+
+ ● “e” para atacar
+
+ ● “t” para continuar diálogo (en escenas que lo requieran)
+
+ ● “f” para cambiar de escena (en escenas que lo requieran)
+
+También tenemos un blog de el [juego](https://aquiles.hashnode.dev/)
