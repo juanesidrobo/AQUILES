@@ -50,7 +50,7 @@ public class JapetoScrip : MonoBehaviour
             animator.SetBool("Run", false);
         }
 
-        if (Input.GetKey("space") && CheckGround.isGrounded)
+        if (Input.GetKey("w") && CheckGround.isGrounded)
         {
             Rb2D.velocity = new Vector2(Rb2D.velocity.x, jumpSpeed);
         }
@@ -94,6 +94,7 @@ public class JapetoScrip : MonoBehaviour
         if (healthpoints <= 0)
         {
             AudioManager.instance.PlayAudio(AudioManager.instance.muerteEnemigo);
+            SendMessage("Change");
             Destroy(gameObject);
         }
     }

@@ -24,17 +24,18 @@ public class Aquileshealthlvl2 : MonoBehaviour
     public void Attacked1()
     {
         healthpoints = healthpoints - 1;
+        AudioManager.instance.PlayAudio(AudioManager.instance.golpear);
         healthimg.fillAmount = healthpoints / 15;
-        if (healthpoints <= 0)
+        if (healthpoints == 0)
         {
             AudioManager.instance.PlayAudio(AudioManager.instance.gameOver);
             StartCoroutine(WaitingMusic());
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }
 
     IEnumerator WaitingMusic()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(3f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

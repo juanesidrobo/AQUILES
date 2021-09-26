@@ -37,7 +37,6 @@ public class Crossed : MonoBehaviour
         if (col.tag == "Enemy") col.SendMessage("Attacked");
         if (col.transform.tag == "Enemy")
         {
-            AudioManager.instance.PlayAudio(AudioManager.instance.golpear);
             Destroy(gameObject);
         }
     }

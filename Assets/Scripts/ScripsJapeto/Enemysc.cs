@@ -175,9 +175,7 @@ public class Enemysc : MonoBehaviour
         if (healthpoints <= 0)
         {
             Destroy(gameObject);
-            AudioManager.instance.PlayAudio(AudioManager.instance.muerteEnemigo);
+            SceneManager.LoadScene("Poseidon");
         }
-
     }
-
 }

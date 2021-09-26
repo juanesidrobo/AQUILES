@@ -37,7 +37,6 @@ public class skullsc : MonoBehaviour
         if (col.transform.tag == "Player")
         {
             //Si se choca con el jugador o con un ataque se destruye
-            AudioManager.instance.PlayAudio(AudioManager.instance.golpear);
             Destroy(gameObject);
         }
     }

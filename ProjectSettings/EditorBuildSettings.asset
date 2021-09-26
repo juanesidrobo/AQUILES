@@ -32,4 +32,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Oceano.unity
     guid: c012c1fdb4e4cb24b910eff2920a8f4e
+  - enabled: 1
+    path: Assets/Scenes/Poseidon.unity
+    guid: 0d57cb7e0ad2b91458d6f06a740dd28b
+  - enabled: 1
+    path: Assets/Scenes/Peticion.unity
+    guid: 35f5a0e22e5b36d44bb0fb3fc3ba8081
   m_configObjects: {}

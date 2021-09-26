@@ -2,33 +2,23 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class Winlvl2 : MonoBehaviour
 {
-    public GameObject WinnerAquiles;
-    void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
-        WinnerAquiles.SetActive(false);
+        StartCoroutine(Change());
     }
 
-    public void Change()
+    // Update is called once per frame
+    void Update()
     {
-            StartCoroutine(EsperarEscena());
-            WinnerAquiles.SetActive(true);
-            AudioManager.instance.PlayAudio(AudioManager.instance.ganar);
-            StartCoroutine(Esperarcambio());
-            SceneManager.LoadScene("Level3");
+        
     }
-
-    IEnumerator EsperarEscena()
+    IEnumerator Change()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(1.1f);
+        SceneManager.LoadScene("Oceano");
     }
-
-    IEnumerator Esperarcambio()
-    {
-        yield return new WaitForSeconds(7f);
-    }
-
 }

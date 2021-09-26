@@ -159,6 +159,7 @@ public class BatScript : MonoBehaviour
     public void Attacked()
     {
         healthpoints = healthpoints - 1;
+        AudioManager.instance.PlayAudio(AudioManager.instance.golpear);
         if (healthpoints <= 0)
         {
             AudioManager.instance.PlayAudio(AudioManager.instance.muerteEnemigo);
