@@ -22,5 +22,11 @@ Los controles básicos serán:
  ● “t” para continuar diálogo (en escenas que lo requieran)
 
  ● “f” para cambiar de escena (en escenas que lo requieran)
+ 
+ Más información
 
-También tenemos un blog de el [juego](https://aquiles.hashnode.dev/)
+ [Blog](https://aquiles.hashnode.dev/)
+ 
+ [Youtube](https://www.youtube.com/channel/UCIHkukj_vZfuiFJvjwCYjjg/featured)
+ 
+
