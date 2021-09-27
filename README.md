@@ -1,4 +1,5 @@
 # AQUILES
+![](https://i.ibb.co/LvBKwBf/Whats-App-Image-2021-09-27-at-5-22-09-PM.jpg)
 
 **¡Atención! se debe abrir con la versión de Unity 2020.3.5.f1**
 
@@ -6,11 +7,15 @@ Después de la titanomaquia que duró aproximadamente 10 años donde al fin pare
 En ese momento los tres de los dioses (Zeus, Hades y Poseidón), al ver que los titanes en  esta ocasión estaban más fuertes que nunca, pues pasaron esos 10 años fortaleciéndose,  pidieron ayuda a Aquiles por su gran fama , vigor, y fuerza de batalla, para que devolviera a  los titanes al Tartaro y de ese modo poder salvar a Atenas y el mundo de una nueva  devastación y posible reinado o dictadura.
 
 Tipo de juego: 2D 
-Público objetivo y ESRB: (E) Everyone 10
-Categoría: Acción y aventura
-Plataforma: Windows
-Motor gráfico y Lenguaje: Unity, C# 
 
+Público objetivo y ESRB: (E) Everyone 10
+
+Categoría: Acción y aventura
+
+Plataforma: Windows
+
+Motor gráfico y Lenguaje: Unity, C# 
+***
 Los controles básicos serán:
 
  ● “a” y “d” para moverse a los lados 
@@ -23,6 +28,7 @@ Los controles básicos serán:
 
  ● “f” para cambiar de escena (en escenas que lo requieran)
  
+ ---
  Más información
 
  [Blog](https://aquiles.hashnode.dev/)
