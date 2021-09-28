@@ -19,7 +19,7 @@ public class Aquiles : MonoBehaviour
     public Transform referenciaOjos;
     public Transform cabeza;
 
-    public GameObject Bala;
+    public GameObject BalaPrefab;
     private float ultimoDisparo;
    
 
@@ -93,7 +93,7 @@ public class Aquiles : MonoBehaviour
 
             //para que dispare si tiene el arma en mano 
 
-            if (Input.GetKey(KeyCode.Space) && Time.time > ultimoDisparo + 0.25f)
+            if (Input.GetKey(KeyCode.Space) && Time.time > ultimoDisparo + 0.35f)
             {
                 Disparar();
                 ultimoDisparo = Time.time;
@@ -120,9 +120,9 @@ public class Aquiles : MonoBehaviour
            
         }
     }
-    
-   
-    
+ 
+    //para que agarre el arma y oculte la del suelo 
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Arma"))
@@ -133,13 +133,15 @@ public class Aquiles : MonoBehaviour
         }
     }
 
+    //para que dispare
+
     private void Disparar()
     {
-        Vector3  direccion;
-        if (transform.localScale.x == 1.0f) direccion = Vector2.left;
-        else direccion = Vector3.right;
-       GameObject bala = Instantiate(Bala, transform.position + direccion * 0.1f, Quaternion.identity);
-        bala.GetComponent<bala_script>().SetDireccion(direccion);
+        Vector3  direction;
+        if (transform.localScale.x == 1.0f) direction = Vector3.right;
+        else direction = Vector3.left;
+       GameObject bala = Instantiate(BalaPrefab, transform.position + direction * 0.1f, Quaternion.identity);
+        bala.GetComponent<bala_script>().SetDirection(direction);
     }
 
     

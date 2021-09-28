@@ -20,7 +20,8 @@ public class poseidon : MonoBehaviour
     public Transform referenciaOjos;
     public Transform cabeza;
 
-    
+    public GameObject BalaPrefab;
+    private float ultimoDisparo;
 
 
 
@@ -47,6 +48,12 @@ public class poseidon : MonoBehaviour
         //para saber si esta en el piso 
         enPiso = Physics2D.OverlapCircle(refPie.position, 1f, 1 << 8);
         anim.SetBool("sobrePiso", enPiso);
+
+        //para que se reinicie cuando cae 
+        if (transform.position.y < -50)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
 
         //para saltar
         if (Input.GetButtonDown("Vertical") && enPiso)
@@ -85,8 +92,14 @@ public class poseidon : MonoBehaviour
 
             referenciaManoArma.position = mira.position;
 
-            if (Input.GetButtonDown("Fire1")) disparar();
+            //para que dispare si tiene el arma en mano 
 
+            if (Input.GetKey(KeyCode.Space) && Time.time > ultimoDisparo + 0.25f)
+            {
+                Disparar();
+                ultimoDisparo = Time.time;
+
+            }
         }
 
      
@@ -108,32 +121,7 @@ public class poseidon : MonoBehaviour
         }
     }
 
-    void disparar()
-    {
-        Vector3 direccionDisparo = (mira.position - contenedorArma.position).normalized;
-
-       int  magnitudPateoArma = -1;
-        // para que se mueva atras luego de disparar
-
-        rb.AddForce(magnitudPateoArma * -direccionDisparo, ForceMode2D.Impulse);
-
-       // para dispare
-
-        RaycastHit2D hit = Physics2D.Raycast
-             (contenedorArma.position,
-             direccionDisparo, 1000f, ~(1 << 8));
-
-
-        if (hit.collider != null)
-        {
-            //le dio a algo
-            if (hit.collider.gameObject.CompareTag("Enemigo"))
-            {
-                // le da a un enemigo 
-                Destroy(hit.collider.gameObject);
-            }
-        }
-    }
+    //para que agarre el arma y oculte la del suelo 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -143,6 +131,17 @@ public class poseidon : MonoBehaviour
             Destroy(collision.gameObject);
             contenedorArma.gameObject.SetActive(true);
         }
+    }
+
+    //para que dispare
+
+    private void Disparar()
+    {
+        Vector3 direction;
+        if (transform.localScale.x == 1.0f) direction = Vector3.right;
+        else direction = Vector3.left;
+        GameObject bala = Instantiate(BalaPrefab, transform.position + direction * 0.1f, Quaternion.identity);
+        bala.GetComponent<bala_script>().SetDirection(direction);
     }
 
 

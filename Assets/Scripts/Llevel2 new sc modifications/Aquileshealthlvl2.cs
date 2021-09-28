@@ -12,7 +12,7 @@ public class Aquileshealthlvl2 : MonoBehaviour
     public float maxHealthPoints = 15;
     //Vida actual
     public float healthpoints;
-
+    
     //Barra de vida 
     public Image healthimg;
 
@@ -21,18 +21,20 @@ public class Aquileshealthlvl2 : MonoBehaviour
         Rb2D = GetComponent<Rigidbody2D>();
         healthpoints = maxHealthPoints;
     }
+   
     public void Attacked1()
     {
         healthpoints = healthpoints - 1;
         AudioManager.instance.PlayAudio(AudioManager.instance.golpear);
-        healthimg.fillAmount = healthpoints / 15;
+
         if (healthpoints == 0)
         {
             AudioManager.instance.PlayAudio(AudioManager.instance.gameOver);
             StartCoroutine(WaitingMusic());
+
         }
     }
-
+ 
     IEnumerator WaitingMusic()
     {
         yield return new WaitForSeconds(3f);

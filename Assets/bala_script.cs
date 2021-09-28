@@ -7,7 +7,8 @@ public class bala_script : MonoBehaviour
 
     private Rigidbody2D Rigidbody2D;
     public float velocidad;
-    private Vector2 Direccion;
+    private Vector2 Direction;
+   
 
     // Start is called before the first frame update
     void Start()
@@ -18,12 +19,12 @@ public class bala_script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Rigidbody2D.velocity = Direccion * velocidad;
+        Rigidbody2D.velocity = Direction * velocidad;
     }
 
-    public void SetDireccion (Vector2 direccion)
+    public void SetDirection (Vector2 direction)
     {
-        Direccion = direccion;
+        Direction = direction;
     }
 
 
