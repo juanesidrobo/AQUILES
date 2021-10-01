@@ -28,10 +28,10 @@ public class AquilesHealth:MonoBehaviour
     void Update()
     {
         saludImg.fillAmount = salud / 100;
-        if (salud < maxSalud)
+        /*if (salud < maxSalud)
         {
             salud = maxSalud;
-        }
+        }*/
 
     }
     private void OnTriggerEnter2D(Collider2D collision)

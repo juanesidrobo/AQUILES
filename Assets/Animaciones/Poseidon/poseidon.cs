@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class poseidon : MonoBehaviour
 {
+
     Animator anim;
     Rigidbody2D rb;
     bool enPiso;
@@ -20,8 +21,16 @@ public class poseidon : MonoBehaviour
     public Transform referenciaOjos;
     public Transform cabeza;
 
-    public GameObject BalaPrefab;
-    private float ultimoDisparo;
+    public GameObject crossed1Prefab;
+    public float attackSpeed = 1f;
+    bool attacking;
+    //Variables relacionadas con la vida
+    //Puntos de vida
+    public int maxHealthPoints = 15;
+    //Vida actual
+    public int healthpoints;
+
+  
 
 
 
@@ -30,6 +39,7 @@ public class poseidon : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        healthpoints = maxHealthPoints;
 
         // Cursor.visible = false;
     }
@@ -58,7 +68,7 @@ public class poseidon : MonoBehaviour
         //para saltar
         if (Input.GetButtonDown("Vertical") && enPiso)
         {
-            rb.AddForce(new Vector2(0, 500),
+            rb.AddForce(new Vector2(0, 700),
            ForceMode2D.Impulse);
 
         }
@@ -66,15 +76,15 @@ public class poseidon : MonoBehaviour
         // para que gire 
         if (tieneArma)
         {
-            if (mira.transform.position.x < transform.position.x) transform.localScale = new Vector3(-1f, 1f, 1f);
-            if (mira.transform.position.x > transform.position.x) transform.localScale = new Vector3(1f, 1f, 1f);
+            if (mira.transform.position.x < transform.position.x) transform.localScale = new Vector3(-0.8f, 0.8f, 0.8f);
+            if (mira.transform.position.x > transform.position.x) transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
 
         }
         else
         {
-            if (movX < 0) transform.localScale = new Vector3(-1f, 1f, 1f);
+            if (movX < 0) transform.localScale = new Vector3(-0.8f, 0.8f, 0.8f);
 
-            if (movX > 0) transform.localScale = new Vector3(1f, 1f, 1f);
+            if (movX > 0) transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
 
         }
 
@@ -92,17 +102,17 @@ public class poseidon : MonoBehaviour
 
             referenciaManoArma.position = mira.position;
 
-            //para que dispare si tiene el arma en mano 
 
-            if (Input.GetKey(KeyCode.Space) && Time.time > ultimoDisparo + 0.25f)
+            // para que dispare 
+
+            if (Input.GetKey(KeyCode.E))
             {
-                Disparar();
-                ultimoDisparo = Time.time;
-
+                if (!attacking) StartCoroutine(Attack(attackSpeed));
             }
+
         }
 
-     
+
 
     }
 
@@ -117,6 +127,7 @@ public class poseidon : MonoBehaviour
             // que el arma tambien mire al mouse
 
             contenedorArma.up = contenedorArma.position - mira.position;
+
 
         }
     }
@@ -133,18 +144,34 @@ public class poseidon : MonoBehaviour
         }
     }
 
-    //para que dispare
-
-    private void Disparar()
+    IEnumerator Attack(float seconds)
     {
-        Vector3 direction;
-        if (transform.localScale.x == 1.0f) direction = Vector3.right;
-        else direction = Vector3.left;
-        GameObject bala = Instantiate(BalaPrefab, transform.position + direction * 0.1f, Quaternion.identity);
-        bala.GetComponent<bala_script>().SetDirection(direction);
+        attacking = true; //Activar Bandera
+        //Si hay objetivo y el prefab es correcto crear instancia
+        if (crossed1Prefab != null)
+        {
+            Instantiate(crossed1Prefab, transform.position,Quaternion.identity);
+            //Esperar los segundos de turno antes de hacer otro ataque
+            yield return new WaitForSeconds(seconds);
+        }
+        attacking = false; //Desactivar bandera
+    }
+
+
+    //Gestión de ataque (hecha en 1 sola para ahorrar linea, permite disminuir y destruir)
+    public void Attacked1()
+    {
+        healthpoints = healthpoints - 1;
+        if (healthpoints <= 0)
+        {
+            AudioManager.instance.PlayAudio(AudioManager.instance.muerteEnemigo);
+            SendMessage("Change");
+            Destroy(gameObject);
+        }
     }
 
 
 
-
 }
+
+

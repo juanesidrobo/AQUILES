@@ -28,7 +28,9 @@ public class AquilesLevel1 : MonoBehaviour
         anim.SetFloat("caminar", Mathf.Abs(movX));
         rb.velocity = new Vector2(velX * movX, rb.velocity.y);
 
+        if (movX < 0) transform.localScale = new Vector3(-0.8f, 0.8f, 0.8f);
 
+        if (movX > 0) transform.localScale = new Vector3(0.8f, 0.8f, 0.8f);
 
         //para saber si esta en el piso 
         enPiso = Physics2D.OverlapCircle(refPie.position, 1f, 1 << 8);

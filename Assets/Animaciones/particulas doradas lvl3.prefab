@@ -14,10 +14,9 @@ GameObject:
   - component: {fileID: 6605772489520363441}
   - component: {fileID: 6605772489520363438}
   - component: {fileID: 7517030469352911295}
-  - component: {fileID: -1777084689663690790}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: particulas doradas lvl3
-  m_TagString: Untagged
+  m_TagString: Bala
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -99,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b42d5baab27ca4b4b9aa7099b70cd8f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  velocidad: 30
+  Speed: 0
 --- !u!50 &6605772489520363441
 Rigidbody2D:
   serializedVersion: 4
@@ -108,7 +107,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6605772489520363439}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -128,7 +127,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6605772489520363439}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -163,16 +162,3 @@ CircleCollider2D:
   m_Offset: {x: 0.5846977, y: 0}
   serializedVersion: 2
   m_Radius: 1.8762246
---- !u!114 &-1777084689663690790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6605772489520363439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c524c91b268f84d4f859645f7cee361b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 30

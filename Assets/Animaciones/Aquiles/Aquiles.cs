@@ -8,7 +8,7 @@ public class Aquiles : MonoBehaviour
     Rigidbody2D rb;
     bool enPiso;
     public Transform refPie;
-    float velX = 20f;
+    public float velX = 20f;
 
     public Transform contenedorArma;
     bool tieneArma;
@@ -21,8 +21,8 @@ public class Aquiles : MonoBehaviour
 
     public GameObject BalaPrefab;
     private float ultimoDisparo;
-   
 
+    public static Aquiles instance;
 
     // Start is called before the first frame update
     void Start()
@@ -32,7 +32,10 @@ public class Aquiles : MonoBehaviour
 
        // Cursor.visible = false;
     }
-
+    private void Awake()
+    {
+        instance = this;
+    }
     // Update is called once per frame
     void Update()
     {
@@ -49,7 +52,7 @@ public class Aquiles : MonoBehaviour
         anim.SetBool("sobrePiso", enPiso);
 
         //para que se reinicie cuando cae 
-        if (transform.position.y < -50)
+        if (transform.position.y < -19)
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
@@ -92,13 +95,13 @@ public class Aquiles : MonoBehaviour
             referenciaManoArma.position = mira.position;
 
             //para que dispare si tiene el arma en mano 
-
+/*
             if (Input.GetKey(KeyCode.Space) && Time.time > ultimoDisparo + 0.35f)
             {
                 Disparar();
                 ultimoDisparo = Time.time;
 
-            }
+            }*/
         }
 
        
@@ -135,6 +138,7 @@ public class Aquiles : MonoBehaviour
 
     //para que dispare
 
+    /*
     private void Disparar()
     {
         Vector3  direction;
@@ -142,7 +146,7 @@ public class Aquiles : MonoBehaviour
         else direction = Vector3.left;
        GameObject bala = Instantiate(BalaPrefab, transform.position + direction * 0.1f, Quaternion.identity);
         bala.GetComponent<bala_script>().SetDirection(direction);
-    }
+    }*/
 
     
 }

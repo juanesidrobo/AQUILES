@@ -13,6 +13,8 @@ TagManager:
   - Item
   - Enemy1
   - suelo
+  - floor
+  - Bala
   layers:
   - Default
   - TransparentFX

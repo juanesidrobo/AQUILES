@@ -4,28 +4,57 @@ using UnityEngine;
 
 public class bala_script : MonoBehaviour
 {
-
-    private Rigidbody2D Rigidbody2D;
-    public float velocidad;
+    public float Speed;
+    GameObject enemy; //Recuparar al objeto jugador
+    Rigidbody2D rb2d;  // Recuperar componenete cuerpo rigido 
+    Vector3 target, dir; //Vectores para almacenar el objetivo y su dirección
     private Vector2 Direction;
-   
 
-    // Start is called before the first frame update
     void Start()
     {
-        Rigidbody2D = GetComponent<Rigidbody2D>();
+        enemy = GameObject.FindGameObjectWithTag("Enemy");
+        rb2d = GetComponent<Rigidbody2D>();
+
+        // Recuperar posición del jugador y la dirección normalizada 
+        if (enemy != null)
+        {
+            target = enemy.transform.position;
+            dir = (target - transform.position).normalized;
+        }
+        Noenemies(enemy);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void FixedUpdate()
     {
-        Rigidbody2D.velocity = Direction * velocidad;
+        //Si hay un objetivo movemos el prefab hacia su posición
+        if (target != Vector3.zero)
+        {
+            rb2d.MovePosition(transform.position + (dir * Speed) * Time.deltaTime);
+        }
     }
 
-    public void SetDirection (Vector2 direction)
+
+
+    private void OnTriggerEnter2D(Collider2D col)
     {
-        Direction = direction;
+        if (col.tag == "Enemy") col.SendMessage("Attacked");
+        if (col.transform.tag == "Enemy")
+        {
+            Destroy(gameObject);
+        }
+    }
+    private void Noenemies(GameObject enemy)
+    {
+        if (enemy == null)
+        {
+            Destroy(gameObject);
+        }
     }
 
+    private void OnBecameInvisible()
+    {
+        //Si se sale de la pantalla borramos el prefab
+        Destroy(gameObject);
+    }
 
 }

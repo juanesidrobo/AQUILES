@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     private bool caminar;
     private SpriteRenderer miSprite;
     int correrHashCode;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -32,6 +33,7 @@ public class PlayerController : MonoBehaviour
         
        // miSprite = GetComponenet<SpriteRenderer>();
     }
+    
     //Gamelogic
     void Update()
     {

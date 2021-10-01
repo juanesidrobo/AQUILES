@@ -25,6 +25,7 @@ public class Aquileshealthlvl2 : MonoBehaviour
     public void Attacked1()
     {
         healthpoints = healthpoints - 1;
+        healthimg.fillAmount = healthpoints / 15;
         AudioManager.instance.PlayAudio(AudioManager.instance.golpear);
 
         if (healthpoints == 0)

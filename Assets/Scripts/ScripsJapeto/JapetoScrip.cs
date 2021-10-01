@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class JapetoScrip : MonoBehaviour
 {
@@ -72,6 +73,12 @@ public class JapetoScrip : MonoBehaviour
                 Rb2D.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier) * Time.deltaTime;
             }
         }
+
+        //para que se reinicie cuando cae 
+        if (transform.position.y < -19)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
     }
 
     IEnumerator Attack(float seconds)
@@ -98,4 +105,5 @@ public class JapetoScrip : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
 }

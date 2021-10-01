@@ -8,17 +8,19 @@ public class peces_script : MonoBehaviour
     private Rigidbody2D rb;
     public float velocidadPatrulla;
 
+    /*
     public int rutina;
     public float cronometro;
     public Animator ani;
     public Quaternion angulo;
     public float grado;
+    */
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        ani = GetComponent<Animator>();
+        //ani = GetComponent<Animator>();
     }
 
     // Update is called once per frame
