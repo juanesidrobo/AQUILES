@@ -9,6 +9,7 @@ public class Ojoproyectil : MonoBehaviour
     public float dispararAbajo;
     bool tomado;
 
+    bool haLanzado;
     public bool frecuenciaDisparo;
     public bool vigilante;
     void Start()
@@ -32,19 +33,27 @@ public class Ojoproyectil : MonoBehaviour
     }
     public void Disparar()
     {
-        
-            GameObject circle = Instantiate(proyectil, transform.position, Quaternion.identity);
+        if (!haLanzado)
+        {
+            GameObject spell = Instantiate(proyectil, transform.position, Quaternion.identity);
             if (transform.localScale.x < 0)
             {
-                circle.GetComponent<Rigidbody2D>().AddForce(new Vector2(500f, 0), ForceMode2D.Force);
+                spell.GetComponent<Rigidbody2D>().AddForce(new Vector2(500f, 0), ForceMode2D.Force);
             }
             else
             {
-                circle.GetComponent<Rigidbody2D>().AddForce(new Vector2(-500f, 0), ForceMode2D.Force);
+                spell.GetComponent<Rigidbody2D>().AddForce(new Vector2(-500f, 0), ForceMode2D.Force);
             }
             dispararAbajo = tiempoaDisparar;
-        
+            Debug.Log("Instancia");
+            StartCoroutine(Lanzar());
+        }
+    }
+    IEnumerator Lanzar()
+    {
+        haLanzado = true;
+        yield return new WaitForSeconds(2.3f);
+        haLanzado = false;
     }
 
-    
 }

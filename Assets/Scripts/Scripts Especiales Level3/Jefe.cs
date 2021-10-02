@@ -69,11 +69,11 @@ public class Jefe : MonoBehaviour
     {
         if (transform.position.x > Aquiles.instance.transform.position.x)
         {
-            transform.localScale = new Vector3(-1, 1, 1);
+            transform.localScale = new Vector3(1, 1, 1);
         }
         else
         {
-            transform.localScale = new Vector3(1, 1, 1);
+            transform.localScale = new Vector3(-1, 1, 1);
         }
     }
 }

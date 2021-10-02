@@ -11,8 +11,10 @@ public class NuevoDetectar : MonoBehaviour
         {
             //StartCoroutine(Golpeado());
             transform.GetComponentInParent<Ojoproyectil>().Disparar();
+            Debug.Log("Colisiona");
         }
     }
+    
     /*IEnumerator Golpeado()
     {
         esGolpeado = true;

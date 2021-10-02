@@ -19,6 +19,6 @@ public class Winlvl2 : MonoBehaviour
     IEnumerator Change()
     {
         yield return new WaitForSeconds(1.1f);
-        SceneManager.LoadScene("Oceano");
+        SceneManager.LoadScene("Level3");
     }
 }

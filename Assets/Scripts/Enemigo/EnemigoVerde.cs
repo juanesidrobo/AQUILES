@@ -11,12 +11,13 @@ public class EnemigoVerde : MonoBehaviour
     public float Speed;
     RaycastHit hit2;
     public Vector3 v3;
+    
     // Start is called before the first frame update
     void Start()
     {
         
     }
-
+    
     private void OnDrawGizmos()
     {
         Gizmos.DrawRay(transform.position, transform.right* Distancia);

@@ -23900,7 +23900,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 311445636}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -249.6, y: 2.2, z: 0}
+  m_LocalPosition: {x: -194.8, y: 5.4, z: 0}
   m_LocalScale: {x: 20, y: 20, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -25265,9 +25265,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Parece que has podido darle su lecci\xF3n a Hyperi\xF3n...\n\nBienvenido
     a las profundidades del mundo, Japeto dios de la muerte te espera m\xE1s adelante
-    del mapa.\n\nRecuerda(Teclas):\n\n- Saltar W/ Flecha arriba.\n- Izquierda A/Flecha
-    izq.\n- Derechaa D/Flecha dcha.\n-Ataque para Japeto E.\n-Ataque para Murci\xE9lagos
-    Q (Solo por\xE1s matar utilizar t\xFA ataque si has matado el m\xFAcielago anteior).\n\n"
+    del mapa, ha robado t\xFA ataque del primer nivel.\n\nRecuerda(Teclas):\n\n-
+    Saltar W/ Flecha arriba.\n- Izquierda A/Flecha izq.\n- Derecha D/Flecha dcha.\n-Ataque
+    para Japeto E.\n-Ataque para Murci\xE9lagos Q (Solo por\xE1s matar utilizar t\xFA
+    ataque si has matado el m\xFAcielago anteior).\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: e73a58f6e2794ae7b1b7e50b7fb811b0, type: 2}

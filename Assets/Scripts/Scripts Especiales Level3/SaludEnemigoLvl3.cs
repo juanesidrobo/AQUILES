@@ -1,12 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SaludEnemigoLvl3 : MonoBehaviour
 {
     Enemigo enemigo;
     bool esGolpeado;
     public GameObject efectoMuerte;
+    public bool Oceano;
     void Start()
     {
         enemigo = GetComponent<Enemigo>();
@@ -32,6 +34,10 @@ public class SaludEnemigoLvl3 : MonoBehaviour
                 Instantiate(efectoMuerte, transform.position, Quaternion.identity);
                 MorirEnemigo();
                 AudioManager.instance.PlayAudio(AudioManager.instance.muerteEnemigo);
+                if (Oceano == true)
+                {
+                    CambiarEscena();
+                }
             }
         }
         if (collision.CompareTag("Bala") && !esGolpeado)
@@ -45,6 +51,11 @@ public class SaludEnemigoLvl3 : MonoBehaviour
                 Instantiate(efectoMuerte, transform.position, Quaternion.identity);
                 MorirEnemigo();
                 AudioManager.instance.PlayAudio(AudioManager.instance.muerteEnemigo);
+                if (Oceano == true)
+                {
+                    CambiarEscena();
+                }
+                
             }
         }
     }
@@ -61,5 +72,8 @@ public class SaludEnemigoLvl3 : MonoBehaviour
         AudioManager.instance.PlayAudio(AudioManager.instance.muerteEnemigo);
         Destroy(gameObject);
     }
-    
+    public void CambiarEscena()
+    {
+        SceneManager.LoadScene("Menu");
+    }
 }
