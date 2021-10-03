@@ -9,7 +9,7 @@ public class Aquileshealthlvl2 : MonoBehaviour
     Rigidbody2D Rb2D;
     //Variables relacionadas con la vida
     //Puntos de vida
-    public float maxHealthPoints = 15;
+    public float maxHealthPoints = 25;
     //Vida actual
     public float healthpoints;
     
@@ -25,7 +25,7 @@ public class Aquileshealthlvl2 : MonoBehaviour
     public void Attacked1()
     {
         healthpoints = healthpoints - 1;
-        healthimg.fillAmount = healthpoints / 15;
+        healthimg.fillAmount = healthpoints / 25;
         AudioManager.instance.PlayAudio(AudioManager.instance.golpear);
 
         if (healthpoints == 0)

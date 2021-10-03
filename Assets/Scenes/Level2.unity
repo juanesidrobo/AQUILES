@@ -23221,7 +23221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72186e14532859b42b489ce60b278451, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealthPoints: 15
+  maxHealthPoints: 25
   healthpoints: 0
   healthimg: {fileID: 1221887831}
 --- !u!4 &161435090 stripped
@@ -25000,7 +25000,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.12953897, g: 0.17668173, b: 0.6698113, a: 0}
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0

@@ -40,6 +40,6 @@ public class JefePanel : MonoBehaviour
     IEnumerator MostrarMensaje()
     {
         yield return new WaitForSeconds(2f);
-        Destroy(Mensaje);
+        Mensaje.SetActive(false);
     }
 }

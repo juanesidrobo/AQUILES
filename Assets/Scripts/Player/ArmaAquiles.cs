@@ -39,7 +39,7 @@ public class ArmaAquiles : MonoBehaviour
     IEnumerator Lanzar()
     {
         haLanzado = true;
-        yield return new WaitForSeconds(2.3f);
+        yield return new WaitForSeconds(1.5f);
         haLanzado = false;
     }
 }

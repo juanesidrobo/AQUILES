@@ -869,8 +869,8 @@ MonoBehaviour:
   - {fileID: 1815111695950850129}
   - {fileID: 1815111694750094432}
   m_Bounds:
-    m_Center: {x: -1.030108, y: 1.1710873, z: 0}
-    m_Extent: {x: 7.0458894, y: 9.166616, z: 0}
+    m_Center: {x: -1.030108, y: 1.1710887, z: 0}
+    m_Extent: {x: 7.0458894, y: 9.1666155, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!95 &1815111695619060959
@@ -910,6 +910,10 @@ MonoBehaviour:
   referenciaManoArma: {fileID: 0}
   referenciaOjos: {fileID: 0}
   cabeza: {fileID: 1815111694750094432}
+  crossed1Prefab: {fileID: 0}
+  attackSpeed: 1
+  maxHealthPoints: 15
+  healthpoints: 0
 --- !u!61 &1815111695619060949
 BoxCollider2D:
   m_ObjectHideFlags: 0

@@ -30,11 +30,8 @@ public class SaludEnemigo : MonoBehaviour
             {
                 MorirEnemigo();
                 AudioManager.instance.PlayAudio(AudioManager.instance.muerteEnemigo);
-                StartCoroutine(EsperarEscena());
-                Victoria();
                 AudioManager.instance.PlayAudio(AudioManager.instance.ganar);
-                StartCoroutine(EsperarEscena());
-                CambiarEscena();
+                Victoria();
             }
         }
     }
@@ -53,13 +50,5 @@ public class SaludEnemigo : MonoBehaviour
     public void Victoria()
     {
         ganoAquiles.SetActive(true);
-    }
-    IEnumerator EsperarEscena()
-    {
-        yield return new WaitForSeconds(10f);
-    }
-    public void CambiarEscena()
-    {
-        SceneManager.LoadScene("Level2");
     }
 }

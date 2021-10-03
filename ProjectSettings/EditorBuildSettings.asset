@@ -5,12 +5,30 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/personajes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Menu.unity
     guid: d57f2c4c38732e24a84951bf14326cb5
+  - enabled: 1
+    path: Assets/Scenes/Hades_1.unity
+    guid: 64dd0ec813352114cb091a274af50cb3
+  - enabled: 1
+    path: Assets/Scenes/EscenaJapeto.unity
+    guid: c7482c66df0c6a648946613af6031d3e
+  - enabled: 1
+    path: Assets/Scenes/Poseidon.unity
+    guid: 0d57cb7e0ad2b91458d6f06a740dd28b
+  - enabled: 1
+    path: Assets/Scenes/Con_elHijo.unity
+    guid: 7008f86b3562fe04fb6a3317a1130528
+  - enabled: 1
+    path: Assets/Scenes/Tartaro.unity
+    guid: ef6292c4d1ca27a4e95e498bae2b5180
+  - enabled: 1
+    path: Assets/Scenes/Peticion.unity
+    guid: 35f5a0e22e5b36d44bb0fb3fc3ba8081
   - enabled: 1
     path: Assets/Scenes/Level1.unity
     guid: 4c4e0662b7bf7e047ab9447893544a8f
@@ -20,22 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level3.unity
     guid: 086b62659db703646b9ac736b1d1e0a8
-  - enabled: 1
-    path: Assets/Scenes/Hades_1.unity
-    guid: 64dd0ec813352114cb091a274af50cb3
-  - enabled: 1
-    path: Assets/Scenes/EscenaJapeto.unity
-    guid: c7482c66df0c6a648946613af6031d3e
-  - enabled: 1
-    path: Assets/Scenes/Tartaro.unity
-    guid: ef6292c4d1ca27a4e95e498bae2b5180
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Oceano.unity
     guid: c012c1fdb4e4cb24b910eff2920a8f4e
-  - enabled: 1
-    path: Assets/Scenes/Poseidon.unity
-    guid: 0d57cb7e0ad2b91458d6f06a740dd28b
-  - enabled: 1
-    path: Assets/Scenes/Peticion.unity
-    guid: 35f5a0e22e5b36d44bb0fb3fc3ba8081
   m_configObjects: {}

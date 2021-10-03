@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SaludEnemigoLvl3 : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class SaludEnemigoLvl3 : MonoBehaviour
     bool esGolpeado;
     public GameObject efectoMuerte;
     public bool Oceano;
+    public GameObject AquilesVictoria;
     void Start()
     {
         enemigo = GetComponent<Enemigo>();
@@ -36,7 +38,7 @@ public class SaludEnemigoLvl3 : MonoBehaviour
                 AudioManager.instance.PlayAudio(AudioManager.instance.muerteEnemigo);
                 if (Oceano == true)
                 {
-                    CambiarEscena();
+                    AquilesVictoria.SetActive(true);
                 }
             }
         }
@@ -53,7 +55,7 @@ public class SaludEnemigoLvl3 : MonoBehaviour
                 AudioManager.instance.PlayAudio(AudioManager.instance.muerteEnemigo);
                 if (Oceano == true)
                 {
-                    CambiarEscena();
+                    AquilesVictoria.SetActive(true);
                 }
                 
             }
@@ -71,9 +73,5 @@ public class SaludEnemigoLvl3 : MonoBehaviour
     {
         AudioManager.instance.PlayAudio(AudioManager.instance.muerteEnemigo);
         Destroy(gameObject);
-    }
-    public void CambiarEscena()
-    {
-        SceneManager.LoadScene("Menu");
     }
 }

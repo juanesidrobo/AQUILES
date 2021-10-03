@@ -162,11 +162,9 @@ public class poseidon : MonoBehaviour
     public void Attacked1()
     {
         healthpoints = healthpoints - 1;
-        if (healthpoints <= 0)
+        if (healthpoints == 0)
         {
-            AudioManager.instance.PlayAudio(AudioManager.instance.muerteEnemigo);
             SendMessage("Change");
-            Destroy(gameObject);
         }
     }
 
