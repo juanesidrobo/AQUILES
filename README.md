@@ -40,6 +40,10 @@ Los controles básicos serán:
 
  ● “f” para cambiar de escena (en escenas que lo requieran)
  
+ ***
+ 
+ Descarga el juego: https://drive.google.com/drive/folders/1fKVD7V4awr10lEf8fQPOWJY4MJmQ0cMY?usp=sharing
+ 
  ---
  ## Autores:
  * Juan Esteban Martinez Sandoval
