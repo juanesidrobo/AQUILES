@@ -46,10 +46,16 @@ Los controles básicos serán:
  * Melissa Andrea Ordoñez Mora
  * Juan Esteban Solarte Idrobo
  ---
+ 
+  ## Contribuir
+ Si quieres contribuir en nuestro juego envianos tu propuesta a jsolartei@unicauca.edu.co, juanemartinez@unicauca.edu.co y manordonez@unicauca.edu.co.
+ 
+ ---
  Más información
 
  [Blog](https://aquiles.hashnode.dev/)
  
  [Youtube](https://www.youtube.com/channel/UCIHkukj_vZfuiFJvjwCYjjg/featured)
  
-
+ 
+**© Todos los derechos reservados Aquiles T3am 2021**
